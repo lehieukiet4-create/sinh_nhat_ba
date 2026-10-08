@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sinh Nhật Ba 🎂</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(135deg, #111, #333, #111);
+
+            color: white;
+        }
+
+        .card {
+            width: 90%;
+            max-width: 650px;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            background: #222;
+
+            border: 3px solid #ffcc00;
+            border-radius: 25px;
+
+            box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+
+            animation: appear 1s ease;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #ffcc00;
+
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #ff5555;
+        }
+
+        .emoji {
+            font-size: 75px;
+            margin: 20px;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .warning {
+            background: #333;
+
+            padding: 15px;
+
+            border-radius: 15px;
+
+            color: #ffcc00;
+
+            margin: 20px 0;
+        }
+
+        .message {
+            background: white;
+            color: #222;
+
+            padding: 20px;
+
+            border-radius: 15px;
+
+            text-align: left;
+
+            line-height: 1.8;
+        }
+
+        button {
+            margin-top: 25px;
+
+            padding: 15px 30px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: #ffcc00;
+            color: #111;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: #ff9900;
+        }
+
+        #secret {
+            display: none;
+
+            margin-top: 25px;
+
+            font-size: 22px;
+
+            color: #ff5555;
+
+            animation: shake 0.5s;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>🚨 THÔNG BÁO KHẨN 🚨</h1>
+
+        <h2>🎂 SINH NHẬT BA 🎂</h2>
+
+        <div class="emoji">
+            👨‍🦱🎂💀
+        </div>
+
+        <div class="warning">
+            ⚠️ CẢNH BÁO ⚠️
+            <br>
+            Hôm nay Ba chính thức +1 tuổi.
+           
+        </div>
+
+        <div class="message">
+
+            <h3>📜 Kính gửi người đàn ông quyền lực nhất nhà:</h3>
+
+            <p>
+                Nhân dịp Ba vừa hoàn thành thêm một vòng quay quanh Mặt Trời ☀️,
+                con xin chúc Ba:
+            </p>
+
+            <p>
+                💪 Sức khỏe vô hạn
+                <br>
+                💰 Tiền nhiều như lá
+                <br>
+                🍻 À thôi... cái này tùy Ba
+                <br>
+                😎 Luôn đẹp trai phong độ
+               
+               
+                
+            </p>
+
+            <p style="text-align:center; font-size:24px;">
+                ❤️ chúc mừng sinh nhật ba ❤️
+            </p>
+
+        </div>
+
+        <button onclick="showSecret()">
+            🎁 BẤM VÀO ĐÂY NẾU BA DÁM
+        </button>
+
+        <div id="secret">
+            🤡 CHÚC MỪNG BA ĐÃ BỊ LỪA 🤡
+            <br><br>
+
+            Nhưng mà...
+            <br>
+
+            🎂 CHÚC BA SINH NHẬT VUI VẺ!!!
+            <br>
+
+            ❤️ BEST WISHES!
+            <img src="ông ba.jpg" alt="ông bu" style="width:100%; border-radius:15px; margin-top:15px;">
+        </div>
+
+    </div>
+
+    <script>
+
+        function showSecret() {
+
+            document.getElementById("secret").style.display = "block";
+
+        }
+
+    </script>
+    <script>
+    let matKhau = prompt("🔐 Nhập mật khẩu để mở quà:");
+
+    if (matKhau !== "sinhnhatba") {
+        document.body.innerHTML = `
+            <h1 style="text-align:center; margin-top:100px;">
+                ❌ Sai mật khẩu!
+            </h1>
+        `;
+    }
+</script>
+
+</body>
+</html>
+
+
